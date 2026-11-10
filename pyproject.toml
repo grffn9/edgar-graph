@@ -1,0 +1,38 @@
+[project]
+name = "edgar-graph"
+version = "0.1.0"
+description = "Turn SEC EDGAR insider filings into a public knowledge graph of companies and the people who run them."
+readme = "README.md"
+authors = [
+    { name = "Griffin Munhall", email = "griffin.munhall@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+edgar-graph = "edgar_graph.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.12"
+files = ["src", "tests"]

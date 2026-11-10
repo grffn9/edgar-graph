@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EDGAR Graph</title>
+  <meta name="description" content="Who runs public companies and what they do with their own stock, linked from SEC insider filings.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-inner">
+      <a class="brand" href="#/">EDGAR Graph</a>
+      <div class="search">
+        <input id="q" type="search" role="combobox" autocomplete="off" spellcheck="false"
+               placeholder="Search a company, ticker or person"
+               aria-label="Search companies, tickers, people and funds"
+               aria-controls="results" aria-expanded="false" aria-autocomplete="list">
+        <ul id="results" role="listbox" aria-label="Search results" hidden></ul>
+      </div>
+      <nav class="top-nav"><a href="#/about">About</a></nav>
+    </div>
+  </header>
+  <main id="app" tabindex="-1">
+    <p class="muted">Loading…</p>
+    <noscript><p>This site needs JavaScript to load its data.</p></noscript>
+  </main>
+  <footer class="foot">
+    <p>Facts as filed with the SEC on Forms 3, 4 and 5. Every transaction links to its source filing. Not investment advice. <span id="meta-line"></span></p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
